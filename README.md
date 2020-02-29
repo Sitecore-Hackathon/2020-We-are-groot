@@ -38,3 +38,5 @@ This shows the details about the previous Sitecore hackathons. This contains all
 
 ### Subscribe
 The user can subscribe to the mailers and can receive the mailers about the hackathons- upcoming and ongoing.
+
+## Demo - https://youtu.be/sZMVqFpHVfQ 
