@@ -1,0 +1,55 @@
+﻿
+@model IEnumerable<Sitecore.Training.Feature.Banner.Model.Carousel>
+@using Sitecore.Training.Feature.Banner.Template
+@using Sitecore.Mvc
+<section id="hero">
+    <div class="hero-container">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"><li data-target="#heroCarousel" data-slide-to="0" class=""></li><li data-target="#heroCarousel" data-slide-to="1" class="active"></li><li data-target="#heroCarousel" data-slide-to="2" class=""></li></ol>
+
+            <div class="carousel-inner" role="listbox">
+                @{
+                    string carouselActive = "active";
+                } 
+
+                @foreach (var carouselItem in Model)
+                {
+                    <!-- Slide 1 -->
+                    <div class="carousel-item @carouselActive">
+                        <div class="carousel-background">  @Html.Sitecore().Field(Template.Carousel.Fields.Image.ToString(), carouselItem.CarouselItems) </div>
+                        @*<div class="carousel-background"><img src="https://www.thewire.co.uk/img/scale/940/736/2018/07/25/KIRBY_Leyland.jpg" alt=""></div>*@
+                        <div class="carousel-container">
+
+                            <div class="carousel-content">
+                                <h2 class="animated fadeInDown"><span> @Html.Sitecore().Field(Template.Carousel.Fields.Header.ToString(), carouselItem.CarouselItems)  </span></h2>
+
+                                <p class="animated fadeInUp"><span> @Html.Sitecore().Field(Template.Carousel.Fields.Teaser.ToString(), carouselItem.CarouselItems)  </span></p>
+                               @{
+                                   Sitecore.Data.Fields.LinkField linkfield = carouselItem.CarouselItems.Fields[Template.Carousel.Fields.Link];
+                               } 
+                                <a href="@carouselItem.LinkUrl(linkfield)" class="btn-get-started animated fadeInUp scrollto"> 
+                                @Html.Sitecore().Field(Template.Carousel.Fields.LinkText.ToString(), carouselItem.CarouselItems) 
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    carouselActive = string.Empty;
+                }
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon icofont-thin-double-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+</section>

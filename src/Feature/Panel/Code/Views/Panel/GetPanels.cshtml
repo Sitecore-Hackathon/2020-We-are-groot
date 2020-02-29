@@ -1,0 +1,37 @@
+﻿
+@model IEnumerable<Sitecore.Training.Feature.Panel.Models.PanelItem>
+@using Sitecore.Training.Feature.Panel.Template
+@using Sitecore.Mvc
+
+<!-- ======= Our Team Section ======= -->
+
+<section id="panels" class="team">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Panel</h2>
+            <p>Sitecore Experienced Panels</p>
+        </div>
+
+        <div class="row">
+            @foreach (var panelItem in Model)
+            {
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="member">
+                        <img src="@panelItem.ImageUrl" style="height:310px" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4> @Html.Sitecore().Field(Template.PanelItem.Fields.Name.ToString(), panelItem.PanelItems)</h4>
+
+                            </div>
+                            <div class="social">
+                                <a href="@panelItem.TwitterUrl"><i class="icofont-twitter"></i></a>
+                                <a href="@panelItem.LinkedinUrl"><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section><!-- End Our Team Section -->

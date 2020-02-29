@@ -1,0 +1,16 @@
+﻿@model ScHackathon.Feature.Subscription.Models.SubscriptionResponseModel
+
+<div class="thank-you">
+    @if (Model.Status == ScHackathon.Feature.Subscription.Models.SubscriptionResponseStatus.InvalidRequest)
+    {
+        <h2 id="response-message" style="color:red"> Invalid Request. Please try again. </h2>
+    }
+    else if (Model.Status == ScHackathon.Feature.Subscription.Models.SubscriptionResponseStatus.Success)
+    {
+        <h2 id="response-message" style="color:green"> Thank you for subscription confirmation. </h2>
+    }
+    else
+    {
+        <h2 id="response-message" style="color:red"> There is an error. Please contact administrator. </h2>
+    }
+</div>
