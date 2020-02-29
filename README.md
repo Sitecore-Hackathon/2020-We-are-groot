@@ -1,38 +1,40 @@
 ![Hackathon Logo](documentation/images/hackathon.png?raw=true "Hackathon Logo")
 
-# Submission Boilerplate
+# SITECORE HACKATHON
 
-Welcome to Sitecore Hackathon 2020.
+## Topic
 
-The Hackathon site can be found at http://www.sitecorehackathon.org/sitecore-hackathon-2020/
+### Sitecore Meetup Website – 
+In recent events the Meetup.com site began charging for the registering and hosting of meetings as well as other features previously free. Many of the Sitecore User Groups rely on Meetup
 
-The purpose of this repository is to provide a sample which shows how to structure the Hackathon submissions.
+### Sitecore Marketplace Website – 
+The Marketplace was once a destination for popular modules to be showcased to the community. Consider the ways in which modules can be shared and installed.
+
+### Sitecore Hackathon Website – 
+This idea is sooo meta! Several years have passed with the current version and it’s in need of a refresh.
+
+Your mission, if you choose to accept, is to build a replacement website addressing one of the listed topics. Your entry will be judged on how complete your solution is and the quality of complete features. Be sure to document your requirements and have fun building!
 
 
-## Entry Submission Requirements 
+## Requirements
 
-All teams are required to submit the following as part of their entry submission on or before the end of the Hackathon on **Saturday  February 29th 2020 at 8PM EST**. The modules should be based on [Sitecore 9.3 (Initial Release)](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx).
+We have selected to refurbish Sitecore Hackathon Website as rightly said it is so meta. We selected the SPA(Single page application) format and classic Sitecore approach to create the components.
 
-**Failure to meet any of the requirements will result in automatic disqualification.** Please reach out to any of the organisers or judges if you require any clarification.
+The following are the requirements of the site we have developed:-
 
-- Sitecore 9.3 (Initial Release) Module (Module install package)
-   - An installation Sitecore Package (`.zip` or `.update`)
+### Home page
+1.	**Carousal**- The carousal on the homepage is the most important component on any site as it denotes what a site stands for. We have created the carousal and identified the most important information and CTAs which would redirect the user to the respective sections/pages.
+2.	**About us section**- This denotes the most relevant information about the hackathon.
+3.	**Our Panel**- The list of judges are shown in this section
+4.	**Gallery**- We have tried to show the Pinterest images of the participants in the gallery section
+5.	**FAQ**- The rules of the hackathon are mentioned here
+### Registration Form
+1.	The registration form has all the relevant fields like the name of the user, details about the user.
+2.	The registration form has the submit button.
+### Teams
+1.	The teams details are shown here with the team members and details about the team members.
+Sitecore hackathons
+This shows the details about the previous Sitecore hackathons. This contains all the information.
 
-- Module code in a public Git source repository. We will be judging (amongst other things):
-  - Cleanliness of code
-  - Commenting where necessary
-  - Code Structure
-  - Standard coding standards & naming conventions
-
-- Precise and Clear Installation Instructions document (1 – 2 pages)
-- Module usage documentation on [Readme.md](documentation) file on the Git Repository (2 – 5 pages)
-  - Module Purpose
-  - Module Sitecore Hackathon Category
-  - How does the end user use the Module?
-  - Screenshots, etc.
-
-- Create a 2 – 10 minutes video explaining the module’s functionality (A link to youtube video)
-
-  - What problem was solved
-  - How did you solve it
-  - What is the end result
+### Subscribe
+The user can subscribe to the mailers and can receive the mailers about the hackathons- upcoming and ongoing.
